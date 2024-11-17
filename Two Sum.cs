@@ -8,7 +8,7 @@
 ///  
 /// </summary>
 
-public class Solution
+public class Two_Sum
 {   
     public int[] TwoSum(int[] nums, int target)
     {
