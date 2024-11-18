@@ -31,5 +31,20 @@ namespace LeetCode
 
             return true; // It's a palindrome
         }
+        //---------------------- Whithout convert to string ----------------------//
+
+        
+        
+            public bool IsPalindrome_nostring(int x)
+            {
+                int r = 0, c = x;
+                while (c > 0)
+                {
+                    r = r * 10 + c % 10;
+                    c /= 10;
+                }
+                return r == x;
+            }
+        
     }
 }
