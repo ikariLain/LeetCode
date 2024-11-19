@@ -33,18 +33,29 @@ namespace LeetCode
         }
         //---------------------- Whithout convert to string ----------------------//
 
-        
-        
-            public bool IsPalindrome_nostring(int x)
+
+        // This method checks if an integer is a palindrome without converting it to a string.
+        public bool IsPalindrome_nostring(int x)
+        {
+            // Initialize variables:
+            // 'r' will store the reversed number, initially 0.
+            // 'c' is a copy of 'x', used for processing.
+            int r = 0, c = x;
+
+            // Loop to reverse the digits of the number while 'c' is greater than 0.
+            while (c > 0)
             {
-                int r = 0, c = x;
-                while (c > 0)
-                {
-                    r = r * 10 + c % 10;
-                    c /= 10;
-                }
-                return r == x;
+                // Add the last digit of 'c' to 'r' (shifting existing digits left).
+                r = r * 10 + c % 10;
+
+                // Remove the last digit from 'c' by integer division.
+                c /= 10;
             }
-        
+
+            // Check if the reversed number 'r' is equal to the original number 'x'.
+            // If they are equal, 'x' is a palindrome.
+            return r == x;
+        }
+
     }
 }
